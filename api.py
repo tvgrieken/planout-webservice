@@ -37,14 +37,14 @@ class ExperimentLogHandler(tornado.web.RequestHandler):
                       }
         self.write(response)
 
- 
-application = tornado.web.Application([
-    
-    (r"/"+VERSION+"/assign/([a-z]+)\/(.*)", ExperimentHandler), # submit testname and userid, post variants in body
-    (r"/"+VERSION+"/log/([a-z]+)\/(.*)", ExperimentLogHandler), # submit testname and userid, post variants in body
-    (r"/version", VersionHandler)
+def main():
+    application = tornado.web.Application([
+        
+        (r"/"+VERSION+"/assign/([a-z]+)\/(.*)", ExperimentHandler), # submit testname and userid, post variants in body
+        (r"/"+VERSION+"/log/([a-z]+)\/(.*)", ExperimentLogHandler), # submit testname and userid, post variants in body
+        (r"/version", VersionHandler)
 
-])
+    ])
  
 if __name__ == "__main__":
     tornado.autoreload.start()
