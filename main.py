@@ -1,8 +1,11 @@
+
 from datetime import date
+import os
 import tornado.escape
 import tornado.ioloop
 import tornado.web
 import tornado.autoreload
+import tornado.httpserver
 import json
 from experiments import UniversalExperiment 
 
@@ -47,7 +50,9 @@ def main():
     ])
     # tornado.autoreload.start()
     # tornado.autoreload.watch('api.py')
-    application.listen(5000)
+    http_server = tornado.httpserver.HTTPServer(application)
+    port = int(os.environ.get("PORT", 5000))
+    http_server.listen(port)
     tornado.ioloop.IOLoop.instance().start()
  
 if __name__ == "__main__":
