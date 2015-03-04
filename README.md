@@ -10,7 +10,7 @@ The service features posting a new test, get instant assignment and the logging 
 Run the server 
 
 ```
-python api.py
+python main.py
 ```
 Define the variants as in the following JSON format:
 

@@ -45,9 +45,9 @@ def main():
         (r"/version", VersionHandler)
 
     ])
-    tornado.autoreload.start()
-    tornado.autoreload.watch('api.py')
-    application.listen(10000)
+    # tornado.autoreload.start()
+    # tornado.autoreload.watch('api.py')
+    application.listen(5000)
     tornado.ioloop.IOLoop.instance().start()
  
 if __name__ == "__main__":
