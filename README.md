@@ -1,6 +1,6 @@
 # PlanOut Webservice
 
-This is a simple webservice for [PlanOut](http://facebook.github.io/planout/) and currenly supports equal distibuted A/B/n tests.
+This is a simple webservice for [PlanOut](http://facebook.github.io/planout/) and currenly supports equal distributed A/B/n tests.
 The service features posting a new test, get instant assignment and the logging of success events.
 
 
